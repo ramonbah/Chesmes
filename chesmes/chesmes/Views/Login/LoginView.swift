@@ -26,6 +26,9 @@ struct LoginView: View {
                     .frame(height: 250)
                 
                 FieldView(title: "Username")
+                    .padding(.bottom)
+                
+                FieldView(title: "Password")
             }
         }
         .padding()
