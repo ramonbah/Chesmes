@@ -9,12 +9,20 @@ import SwiftUI
 
 struct LoginView: View {
     var body: some View {
-        VStack {
-            HStack {
+        ZStack {
+            VStack {
+                HStack {
+                    Spacer()
+                    SimpleButton(systemImage: "server.rack")
+                }
                 Spacer()
-                SimpleButton(systemImage: "server.rack")
             }
-            Spacer()
+            VStack {
+                Image("splash")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 250)
+            }
         }
         .padding()
     }
