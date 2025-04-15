@@ -21,7 +21,7 @@ struct FieldView: View {
             .autocapitalization(.none)
             .autocorrectionDisabled()
         }
-        .padding(.horizontal)
+        .padding([.horizontal, .bottom])
     }
 }
 

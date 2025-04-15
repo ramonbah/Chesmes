@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    @State var error: String = ""
     var body: some View {
         ZStack {
             VStack {
@@ -25,10 +26,22 @@ struct LoginView: View {
                     .scaledToFit()
                     .frame(height: 250)
                 
+                HStack {
+                    Text(error)
+                        .font(.caption)
+                        .foregroundStyle(.red)
+                    
+                    Spacer()
+                }
+                .padding(.horizontal)
+                
                 FieldView(title: "Username")
-                    .padding(.bottom)
                 
                 FieldView(title: "Password")
+                
+                RequestButton(type: .login)
+                
+                RequestButton(type: .loginRegister)
             }
         }
         .padding()
